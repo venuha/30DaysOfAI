@@ -18,7 +18,7 @@ Master AI app development from chatbots to production-ready RAG systems and inte
 
 4. **Complete all 30 days** and DM [Chanin Nantasenamat](https://www.linkedin.com/in/chanin-nantasenamat/) or [Jessica Smith](https://www.linkedin.com/in/jessica-s-095a861b3/)
 
-5. **Get recognized** in the Hall of Fame 🏆 (+ possible stickers!)
+5. **Get recognized** in the Hall of Fame 🏆 (+ possible swags and stickers!)
 
 ## 🚀 Getting Started
 
