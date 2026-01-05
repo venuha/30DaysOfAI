@@ -11,7 +11,7 @@ Let's break down what each part of the code does.
 In forthcoming lessons we'll leverage Snowflake's Cortex AI and therefore please install the following prerequisite libraries:
 ```
 snowflake-ml-python==1.20.0
-   snowflake-snowpark-python==1.44.0
+snowflake-snowpark-python==1.44.0
 ```
 
 ##### Locally
