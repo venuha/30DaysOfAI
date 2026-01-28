@@ -1,4 +1,6 @@
-# Day 26: Introduction to Cortex Agents
+# Day 26
+# Introduction to Cortex Agents
+
 import streamlit as st
 
 # Connect to Snowflake
