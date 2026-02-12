@@ -1,10 +1,5 @@
-# Day 3
-# Write streams
-
 import streamlit as st
 from openai import OpenAI
-
-st.title(":material/airwave: Write Streams")
 
 conn = st.secrets["connections"]["snowflake"]
 host = conn.get("host") or f"{conn['account']}.snowflakecomputing.com"
@@ -24,7 +19,7 @@ streaming_method = st.radio(
 
 if st.button("Generate Response"):
     messages = [{"role": "user", "content": prompt}]
-    
+
     if streaming_method == "Direct":
         with st.spinner(f"Generating response with `{model}`"):
             response = client.chat.completions.create(model=model, messages=messages, stream=False)
@@ -33,7 +28,3 @@ if st.button("Generate Response"):
         with st.spinner(f"Generating response with `{model}`"):
             stream = client.chat.completions.create(model=model, messages=messages, stream=True)
         st.write_stream(stream)
-
-# Footer
-st.divider()
-st.caption("Day 3: Write streams | 30 Days of AI")

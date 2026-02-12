@@ -1,6 +1,3 @@
-# Day 2
-# Hello, Cortex!
-
 import streamlit as st
 from snowflake.snowpark.functions import ai_complete
 import json
