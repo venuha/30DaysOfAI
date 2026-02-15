@@ -1,9 +1,6 @@
-# Day 10
-# Your First Chatbot (with State)
-
 import streamlit as st
 import json
-from snowflake.snowpark.functions import ai_complete
+from snowflake.snowpark.functions import ai_complete 
 
 # Connect to Snowflake
 try:
