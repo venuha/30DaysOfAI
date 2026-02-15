@@ -1,6 +1,3 @@
-# Day 8
-# Meet the Chat Elements
-
 import streamlit as st
 
 st.title(":material/chat: Meet the Chat Elements")
