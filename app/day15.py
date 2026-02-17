@@ -1,6 +1,3 @@
-# Day 15
-# Model Comparison Arena
-
 import streamlit as st
 import time
 import json
