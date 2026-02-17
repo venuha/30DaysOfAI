@@ -1,6 +1,3 @@
-# Day 12
-# Streaming Responses
-
 import streamlit as st
 import json
 from snowflake.snowpark.functions import ai_complete
