@@ -1,6 +1,3 @@
-# Day 11
-# Displaying Chat History
-
 import streamlit as st
 import json
 from snowflake.snowpark.functions import ai_complete
