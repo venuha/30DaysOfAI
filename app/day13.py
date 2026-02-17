@@ -1,6 +1,3 @@
-# Day 13
-# Adding a System Prompt
-
 import streamlit as st
 import json
 from snowflake.snowpark.functions import ai_complete
