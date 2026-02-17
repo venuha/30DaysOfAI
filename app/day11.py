@@ -1,6 +1,7 @@
 import streamlit as st
 import json
 from snowflake.snowpark.functions import ai_complete
+import time
 
 # Connect to Snowflake
 try:
@@ -23,7 +24,7 @@ def call_llm(prompt_text: str) -> str:
         return response_json.get("choices", [{}])[0].get("messages", "")
     return str(response_json)
 
-st.title(":material/chat: Chatbot with History")
+st.title(":material/chat: Chatbot with Streaming")
 
 # Initialize messages
 if "messages" not in st.session_state:
@@ -57,22 +58,28 @@ if prompt := st.chat_input("Type your message..."):
     with st.chat_message("user"):
         st.markdown(prompt)
     
-    # Generate and display assistant response
+    # Build the full conversation history for context
+    conversation = "\n\n".join([
+        f"{'User' if msg['role'] == 'user' else 'Assistant'}: {msg['content']}"
+        for msg in st.session_state.messages
+    ])
+    full_prompt = f"{conversation}\n\nAssistant:"
+    
+    # Generate stream
+    def stream_generator():
+        response_text = call_llm(full_prompt)
+        for word in response_text.split(" "):
+            yield word + " "
+            time.sleep(0.02)
+    
+    # Display assistant response with streaming
     with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
-            # Build the full conversation history for context
-            conversation = "\n\n".join([
-                f"{'User' if msg['role'] == 'user' else 'Assistant'}: {msg['content']}"
-                for msg in st.session_state.messages
-            ])
-            full_prompt = f"{conversation}\n\nAssistant:"
-            
-            response = call_llm(full_prompt)
-        st.markdown(response)
+        with st.spinner("Processing"):
+            response = st.write_stream(stream_generator)
     
     # Add assistant response to state
     st.session_state.messages.append({"role": "assistant", "content": response})
-    st.rerun()
+    st.rerun()  # Force rerun to update sidebar stats
 
 st.divider()
-st.caption("Day 11: Displaying Chat History | 30 Days of AI")
+st.caption("Day 12: Streaming Responses | 30 Days of AI")
