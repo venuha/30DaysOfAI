@@ -1,6 +1,3 @@
-# Day 14
-# Adding Avatars and Error Handling
-
 import streamlit as st
 import json
 from snowflake.snowpark.functions import ai_complete
