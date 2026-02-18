@@ -25,7 +25,7 @@ if 'day19_database' not in st.session_state:
         st.session_state.day19_database = st.session_state.embeddings_database
         st.session_state.day19_schema = st.session_state.embeddings_schema
     else:
-        st.session_state.day19_database = "RAG_DB"
+        st.session_state.day19_database = "DEV_DB"
         st.session_state.day19_schema = "RAG_SCHEMA"
 
 # Database Configuration

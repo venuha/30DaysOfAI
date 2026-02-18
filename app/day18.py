@@ -27,7 +27,7 @@ if 'day18_database' not in st.session_state:
         st.session_state.day18_schema = st.session_state.chunks_schema
         st.session_state.day18_chunk_table = "REVIEW_CHUNKS"
     else:
-        st.session_state.day18_database = "RAG_DB"
+        st.session_state.day18_database = "DEV_DB"
         st.session_state.day18_schema = "RAG_SCHEMA"
         st.session_state.day18_chunk_table = "REVIEW_CHUNKS"
 
