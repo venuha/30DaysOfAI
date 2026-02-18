@@ -1,6 +1,3 @@
-# Day 17
-# Loading and Transforming Customer Reviews for RAG
-
 import streamlit as st
 import pandas as pd
 import re
