@@ -1,6 +1,3 @@
-# Day 16
-# Batch Document Text Extractor for RAG
-
 import streamlit as st
 from pypdf import PdfReader
 import io
@@ -23,7 +20,7 @@ st.write("Upload multiple documents at once to extract text and save to Snowflak
 
 # Initialize session state for database configuration
 if 'database' not in st.session_state:
-    st.session_state.database = "RAG_DB"
+    st.session_state.database = "DEV_DB"
 if 'schema' not in st.session_state:
     st.session_state.schema = "RAG_SCHEMA"
 if 'table_name' not in st.session_state:
@@ -251,8 +248,7 @@ if uploaded_files:
                     try:
                         # Ensure database and schema exist
                         st.write(":material/looks_one: Setting up database structure...")
-                        session.sql(f"CREATE DATABASE IF NOT EXISTS {database}").collect()
-                        session.sql(f"CREATE SCHEMA IF NOT EXISTS {database}.{schema}").collect()
+                        
                         
                         # Create table if it doesn't exist
                         st.write(":material/looks_two: Creating table if needed...")
