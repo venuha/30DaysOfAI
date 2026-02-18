@@ -23,7 +23,7 @@ if 'day17_database' not in st.session_state:
         st.session_state.day17_schema = st.session_state.rag_source_schema
         st.session_state.day17_table_name = "EXTRACTED_DOCUMENTS"
     else:
-        st.session_state.day17_database = "RAG_DB"
+        st.session_state.day17_database = "DEV_DB"
         st.session_state.day17_schema = "RAG_SCHEMA"
         st.session_state.day17_table_name = "EXTRACTED_DOCUMENTS"
 
