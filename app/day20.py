@@ -22,7 +22,7 @@ with st.container(border=True):
     st.subheader(":material/search: Search Configuration and Query")
     
     # Default search service from Day 19
-    default_service = 'RAG_DB.RAG_SCHEMA.CUSTOMER_REVIEW_SEARCH'
+    default_service = 'DEV_DB.RAG_SCHEMA.CUSTOMER_REVIEW_SEARCH'
     
     # Try to get available services
     try:
