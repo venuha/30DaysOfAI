@@ -7,6 +7,20 @@ from snowflake.core import Root
 st.title(":material/search: Querying Cortex Search")
 st.write("Search and retrieve relevant text chunks using Cortex Search Service.")
 
+# Custom CSS for green search button
+st.markdown("""
+    <style>
+    button[kind="primary"] {
+        background-color: #28a745 !important;
+        border-color: #28a745 !important;
+    }
+    button[kind="primary"]:hover {
+        background-color: #218838 !important;
+        border-color: #1e7e34 !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # Connect to Snowflake
 try:
     # Works in Streamlit in Snowflake
