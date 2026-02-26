@@ -1,6 +1,3 @@
-# Day 24
-# Working with Images (Multimodality)
-
 import streamlit as st
 import io
 import time
@@ -17,7 +14,7 @@ except:
 
 # Initialize state
 if "image_database" not in st.session_state:
-    st.session_state.image_database = "RAG_DB"
+    st.session_state.image_database = "DEV_DB"
     st.session_state.image_schema = "RAG_SCHEMA"
 
 # Get stage path from session state
