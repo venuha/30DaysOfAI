@@ -1,3 +1,7 @@
 streamlit
 snowflake-ml-python
-snowflake-snowpark-python
+snowflake-snowpark-python>=1.18.0,<2.0
+trulens-core>=2.0.0
+trulens-connectors-snowflake>=2.0.0
+trulens-providers-cortex>=2.0.0
+pandas>=1.5.0
