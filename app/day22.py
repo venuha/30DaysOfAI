@@ -1,6 +1,3 @@
-# Day 22
-# Chat with Your Documents
-
 import streamlit as st
 
 st.title(":material/chat: Chat with Your Documents")
@@ -25,7 +22,7 @@ with st.sidebar:
     st.header(":material/settings: Settings")
     
     # Check for search service from Day 19
-    default_service = st.session_state.get('search_service', 'RAG_DB.RAG_SCHEMA.CUSTOMER_REVIEW_SEARCH')
+    default_service = st.session_state.get('search_service', 'DEV_DB.RAG_SCHEMA.CUSTOMER_REVIEW_SEARCH')
     
     # Try to get available services
     try:
